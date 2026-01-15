@@ -1,11 +1,11 @@
-# NLP-Assisted Qualitative Coding
+# NLP-Assisted Method for Qualitative Coding
 
 This repository contains Python scripts for using a semantic shift algorithm for chunking text documents and classifying chunks using GPT-4. This repository is a companion to the paper "Integrating Large Language Models into Qualitative Methods in Implementation Science: A Proof-of-Concept Study" by the Authors Lia Chin-Purcell, Elena Rosenberg-Carlson, Helene Chokron-Garneau and Mark McGovern.
 
 ## Features
 
 - **Semantic Chunking**: Splits text documents into semantically coherent chunks using Sentence Transformers and cosine similarity.
-- **GPT-Based Classification**: Uses GPT-4 via Secure GPT, a Stanford-hosted instance of GPT-4, to classify text segments according to a codebook
+- **GPT-Based Classification**: Uses GPT-4 via [Secure GPT](https://securegpt.stanfordhealthcare.org/), a Stanford-hosted instance of GPT-4, to classify text segments according to a codebook
 - **JSON Output**: Exports results in structured JSON format.
 
 ## Set up
@@ -85,13 +85,6 @@ The tool generates a JSON file with the following structure:
 The tool uses environment variables for API configuration:
 - `API_URL`: Your API endpoint URL
 - `API_KEY`: Your API key (e.g., OpenAI subscription key)
-
-### Chunking Parameters
-
-The semantic chunking uses adaptive thresholds based on context:
-- Clarification requests: Very low threshold (0.01) to keep together
-- Interviewer questions: Higher threshold (0.7) to split
-- Default: Moderate threshold (0.35) for general content
 
 ## Requirements
 
